@@ -6,4 +6,9 @@ defmodule LearningLists do
 
   @spec prepend(list) :: list
   def prepend(item), do: [item | @games]
+
+  @spec count_number_of_characters(list, char) :: integer
+  def count_number_of_characters(char_list, character_to_count) do
+    Enum.count(char_list, fn c -> c == character_to_count end)
+  end
 end
